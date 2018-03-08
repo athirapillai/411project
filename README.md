@@ -1,13 +1,9 @@
-## IST 411 PORTFOLIO PROJECT
+# IST 411 PORTFOLIO PROJECT
 
 
+## Oto Photo Sharing Platform
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
+Oto is a photo sharing platform with themes for photographers of all levels of experience. Oto has five shared albums with a 'theme' assigned for each album. Every user can contribute to these shared albums to post images related to each theme, and the images are categorized within each album based on meta data such as location. 
 
 # Header 1
 ## Header 2
@@ -22,7 +18,7 @@ Syntax highlighted code block
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
-```
+
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
