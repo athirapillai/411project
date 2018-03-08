@@ -27,6 +27,10 @@ For example, upon entering the album "Sunsets", users would be able to see photo
 - User opens Oto to the thumbnails of the five themed albums and selects the button beneath the albums titled "My Favorites". The user scrolls through images that were previously favorited, and these images are also categorized with the Imagga API. 
 
 ## **Project Schedule**
+fjkaldfjak
+
+falkfa
+
 ## **Project Justification**
 
 
