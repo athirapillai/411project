@@ -1,7 +1,7 @@
-# Oto Photo Sharing Platform
-**Project Proposal**
+# **Oto Photo Sharing Platform**
+## Project Proposal
 
-## Project Description
+## **Project Description**
 Oto is a photo sharing platform with themes for photographers of all levels of experience. Oto has five shared albums with a 'theme' assigned for each album. Every user can contribute to these shared albums to post images related to each theme, and the images are categorized within each album based on meta data such as location. This way, users can view the categorized images from all over the world.
 
 ### Album themes:
@@ -13,7 +13,7 @@ Oto is a photo sharing platform with themes for photographers of all levels of e
 
 For example, upon entering the album "Sunsets", users would be able to see photos of sunsets from all over the world. 
 
-## Project Design
+## **Project Design**
 
 ### Technologies that I will use to develop Oto include:
 - Spring MVC
@@ -27,8 +27,8 @@ For example, upon entering the album "Sunsets", users would be able to see photo
 - User opens Oto to the thumbnails of the five shared themed albums, selects the fourth album "Quotes", and scrolls through the images. One particular image in the album piques the user's interest, because it displays one of the user's favorite quotes. The user clicks the heart icon in the corner of the image to favorite this image to view later. 
 - User opens Oto to the thumbnails of the five themed albums and selects the button beneath the albums titled "My Favorites". The user scrolls through images that were previously favorited, and these images are also categorized with the Imagga API. 
 
-## Project Schedule
-## Project Justification
+## **Project Schedule**
+## **Project Justification**
 
 
 
