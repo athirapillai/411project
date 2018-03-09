@@ -60,22 +60,10 @@ The user is able to select the Favorites album to view images they previously fa
 ![Image](https://raw.githubusercontent.com/athirapillai/OTO-Photo/master/assets/mockup3.png)
 
 
-
 ## **Project Justification**
+The beauty of nature is often breathtaking and leaves viewers speechless, and there can never be enough photos taken of the world's best landmarks. Often, those who are lucky enough to take a photo of that perfect sunset or the mountain peak surrounded by clouds want to share their photographs proudly. Oto Photo allows photographers and travelers of all experience levels to do just this.  
+Traveling the world to see the best of what nature has to offer is an expensive and difficult pursuit for many people. Users of Oto may also be those who would like to view beautiful images of waterfalls from around the world. Oto allows users to view images of their favorite landmarks and landscapes from all over the world. Imagine being able to view a beautiful sunset taken at the perfect time at a location across the world from you - that's what Oto Photo provides its users. 
 
+**Novelty:** Most similar photo-sharing platforms focus on the user rather than the photo itself. Oto is novel in the way that it brings the focus back onto the photos themselves - on what they display and where they were taken. Themed albums allow users to view exactly what they want - from colorful sunsets to tall mountains and backyard creeks - emphases placed on the photograph itself. This allows users to truly appreciate the photograph in all its beauty. 
 
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/athirapillai/411project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+**Complexity:** This project will be a challenging one, but it will enable me to learn and showcase plenty of new skills. Creating the views with Thyme Leaf documentation, integrating the image categorization API, instantiating an image upload, and saving favorited images for later viewing are all challenging steps in the overall process of this project. I have never used AWS before either, so using such a popular cloud platform as my primary database will be a complex but rewarding point in the process. I expect to struggle through some parts more than others, but I will try my best to complete the project as planned. 
