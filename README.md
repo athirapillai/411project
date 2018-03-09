@@ -47,7 +47,9 @@ There will be a total of three checkpoints, one for every two weeks for the rest
 - Test to ensure images and data are stored in respective databases
 
 ### Interface View Mockups
+The first view that users will see is the welcome page, where all the themed albums plus the Favorites album are on display.
 
+![Image](https://raw.githubusercontent.com/athirapillai/OTO-Photo/master/assets/mockup1.png)
 
 ## **Project Justification**
 
