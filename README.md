@@ -29,7 +29,25 @@ For example, upon entering the album "Sunsets", users would be able to see photo
 ## **Project Schedule**
 There will be a total of three checkpoints, one for every two weeks for the rest of the semester.
 
-### Checkpoint 1: 
+### Checkpoint 1: March 24, 2018
+- Start new Spring MVC project
+- Instantiate interface view files
+- Set up initial five themed albums to databases
+- Set up photo upload (including caption and description) for each album
+
+### Checkpoint 2: April 7, 2018
+- Integrate Imagga API for gathering meta data
+- Set up favoriting capability
+- View "My Favorites" in favorites view
+- Ensure multiple users can access site
+
+### Checkpoint 3: April 21, 2018
+- Deploy to personal domain online
+- Test to ensure multiple users can upload images
+- Test to ensure images and data are stored in respective databases
+
+### Interface View Mockups
+
 
 ## **Project Justification**
 
