@@ -19,6 +19,7 @@ For example, upon entering the album "Sunsets", users would be able to see photo
 - Spring MVC
 - [AWS Cognito](https://aws.amazon.com/cognito/) API to handle user accounts and authentication
 - [Imagga](https://imagga.com/) image categorization API 
+- Front-end: Angular
 - Databases: MySQL to store data, S3 storage on AWS to store image files
 - Deploy the final Oto project to my personal domain online
 
@@ -69,4 +70,4 @@ Traveling the world to see the best of what nature has to offer is an expensive 
 
 **Novelty:** Most similar photo-sharing platforms focus on the user rather than the photo itself. Oto is novel in the way that it brings the focus back onto the photos themselves - on what they display and where they were taken. Themed albums allow users to view exactly what they want - from colorful sunsets to tall mountains and backyard creeks - emphasis placed on the photograph itself. This allows users to truly appreciate the photograph in all its beauty. 
 
-**Complexity:** This project will be a challenging one, but it will enable me to learn and showcase plenty of new skills. Creating the views with Thyme Leaf framework, integrating the image categorization API, instantiating an image upload, and saving favorited images for later viewing are all challenging steps in the overall process of this project. I have never used AWS before either, so using such a popular cloud platform as my primary database will be a complex but rewarding point in the process. I expect to struggle through some parts more than others, but I will try my best to complete the project as planned. 
+**Complexity:** This project will be a challenging one, but it will enable me to learn and showcase plenty of new skills. Creating the views with the Angular framework, integrating the image categorization API, instantiating an image upload, and saving favorited images for later viewing are all challenging steps in the overall process of this project. I have never used AWS before either, so using such a popular cloud platform as my primary database will be a complex but rewarding point in the process. I expect to struggle through some parts more than others, but I will try my best to complete the project as planned. 
