@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: linear-gradient(#165996, #177879, #169857) no-repeat;
+  height: 100%;
+  width: 100%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.albums {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
+
+hr {
+    display: block;
+    color: #fff;
+    height: 1px;
+    width: 90%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
+
