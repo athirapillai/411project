@@ -1,0 +1,23 @@
+{
+  "name": "OTO-Photo",
+  "version": "1.0.0",
+  "description": "Athira Pillai",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/athirapillai/OTO-Photo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/athirapillai/OTO-Photo/issues"
+  },
+  "homepage": "https://github.com/athirapillai/OTO-Photo#readme",
+  "dependencies": {
+    "aws-amplify": "^0.2.11"
+  }
+}
