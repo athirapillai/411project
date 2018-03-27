@@ -1,0 +1,23 @@
+<div class="header">
+  <h1>WELCOME TO</h1><a routerLink="/"><img width="450" height="195" alt="logo" src="/assets/logo.png"></a>
+</div>
+<br>
+<div class="row"><h2>Login below:</h2></div>
+<br>
+
+<form class="login-form">
+
+  <mat-form-field class="login-full-width">
+    <input matInput placeholder="E-mail" [(ngModel)]="email" name="email">
+  </mat-form-field>
+  <mat-form-field class="login-full-width">
+    <input matInput placeholder="Password" [(ngModel)]="password" name="password">
+  </mat-form-field>
+  <a><button (click)="signInEmail()" type="button" class="styledButton">Login</button></a>
+
+</form>
+
+
+
+
+

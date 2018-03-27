@@ -1,3 +1,4 @@
+@import './custom-theme.scss';
 /* You can add global styles to this file, and also import other style files */
 body {
   background: linear-gradient(#165996, #177879, #169857) no-repeat;
@@ -5,6 +6,7 @@ body {
   width: 100%;
   font-family: 'Nunito Sans', sans-serif;
 }
+
 
 .header {
     display: block;
@@ -32,6 +34,7 @@ h2 {
   font-size: 170%;
   font-weight: 150;
   align: center;
+  margin: 0 auto;
 
 }
 
