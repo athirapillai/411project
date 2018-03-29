@@ -25,27 +25,27 @@ For example, upon entering the album "Sunsets", users would be able to see photo
 
 ### Use cases:
 - User successfully logs into Oto to the thumbnails of the five shared themed albums, selects the first themed album "Sunsets", views grid of images of sunsets and identifies the location of each sunset. 
-- User successfully logs into Oto to the thumbnails of the five shared themed albums, selects the third themed album "Mountains", and clicks "Upload". The user then selects the image file of the desired photo to upload, adds a caption and additional information, and posts the image to the album for others to view. 
+- User successfully logs into Oto to the thumbnails of the five shared themed albums, selects the "Upload" button, and selects the image file of the desired photo to upload. The user adds a caption, location, and description, and the Imagga API identifies the image as "mountain". After the user clicks "Submit", the image is posted to the Mountains album for others to view.
 - User successfully logs into Oto to the thumbnails of the five shared themed albums, selects the fourth album "Water", and scrolls through the images. One particular image in the album piques the user's interest, because it displays one of the user's favorite lakes. The user clicks the heart icon in the corner of the image to favorite this image to view later. 
 - User successfully logs into Oto to the thumbnails of the five themed albums and selects the button beneath the albums titled "Favorites". The user scrolls through images that were previously favorited, and these images are also categorized with the Imagga API. 
 
 ## **Project Schedule**
 There will be a total of three checkpoints, one for every two weeks for the rest of the semester.
 
-### Checkpoint 1: March 24, 2018
+### Checkpoint 1: March 29, 2018
 - Start new Spring MVC project
-- Instantiate interface view files
-- Set up initial five themed albums to databases
+- Instantiate interface view files: Login, Sign-up, Homepage, and each album page
 - Set up user account authentication with AWS Cognito API
-- Set up photo upload (including caption and description) for each album
+- Set up Imagga API account and API keys
 
-### Checkpoint 2: April 7, 2018
+### Checkpoint 2: April 14, 2018
+- Set up initial five themed albums to databases
 - Integrate Imagga API for gathering meta data
 - Set up favoriting capability
-- View "Favorites" in favorites view
 - Ensure multiple users can access site
+- Set up photo upload (including caption and description) for each album
 
-### Checkpoint 3: April 21, 2018
+### Checkpoint 3: April 28, 2018
 - Deploy to personal domain online
 - Test to ensure multiple users can upload images
 - Test to ensure images and data are stored in respective databases
