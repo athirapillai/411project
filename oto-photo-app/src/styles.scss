@@ -46,8 +46,18 @@ h3 {
   padding-left: 5em;
   padding-bottom: 5em;
 
-
 }
+
+h4 {
+  color: #fff;
+  font-weight: 100;
+  font-size: 120%;
+}
+
+a {
+  margin: 0 auto;
+}
+
 
 hr {
     display: block;
@@ -75,5 +85,29 @@ hr {
   background-color: #fff;
   color: #169658;
 
+}
+
+.login-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+.login-full-width {
+  width: 100%;
+}
+
+
+/deep/ .mat-form-field-underline {
+  background-color: white !important;
+}
+
+
+input.mat-input-element {
+color: white;
+}
+
+input.mat-form-field-label {
+color: white;
 }
 
