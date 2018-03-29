@@ -1,0 +1,23 @@
+.login-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+.login-full-width {
+  width: 100%;
+}
+
+
+/deep/ .mat-form-field-underline {
+  background-color: white !important;
+}
+
+
+input.mat-input-element {
+color: white;
+}
+
+input.mat-form-field-label {
+color: white;
+}

@@ -20,7 +20,6 @@ import { LandmarksComponent } from './landmarks/landmarks.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { PhotoViewComponent } from './photo-view/photo-view.component';
 import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
 
 const appRoutes: Routes = [
  { path: 'sunsets', component: SunsetsComponent },
@@ -29,8 +28,6 @@ const appRoutes: Routes = [
  { path: 'water', component: WaterComponent },
  { path: 'landmarks', component: LandmarksComponent },
  { path: 'favorites', component: FavoritesComponent },
- { path: 'signup', component: SignupComponent },
- { path: 'home', component: HomepageComponent },
  { path: '**', component: LoginComponent }
 ];
 
@@ -45,8 +42,7 @@ const appRoutes: Routes = [
     LandmarksComponent,
     FavoritesComponent,
     PhotoViewComponent,
-    LoginComponent,
-    SignupComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
