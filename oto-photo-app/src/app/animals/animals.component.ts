@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { Auth } from 'aws-amplify';
 import { Router } from '@angular/router';
 
+
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css'],
+  selector: 'app-animals',
+  templateUrl: './animals.component.html',
+  styleUrls: ['./animals.component.css'],
   providers: [Router],
 })
-export class HomepageComponent implements OnInit {
+export class AnimalsComponent implements OnInit {
 
-   constructor(private router:Router) {
+  constructor(private router:Router) {
 
     }
 
@@ -23,6 +24,4 @@ export class HomepageComponent implements OnInit {
         .catch(err => console.log(err));
 
     }
-
-
 }

@@ -3,14 +3,14 @@ import { Auth } from 'aws-amplify';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css'],
+  selector: 'app-food',
+  templateUrl: './food.component.html',
+  styleUrls: ['./food.component.css'],
   providers: [Router],
 })
-export class HomepageComponent implements OnInit {
+export class FoodComponent implements OnInit {
 
-   constructor(private router:Router) {
+  constructor(private router: Router) {
 
     }
 

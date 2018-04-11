@@ -3,12 +3,12 @@ import { Auth } from 'aws-amplify';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css'],
+  selector: 'app-nature',
+  templateUrl: './nature.component.html',
+  styleUrls: ['./nature.component.css'],
   providers: [Router],
 })
-export class HomepageComponent implements OnInit {
+export class NatureComponent implements OnInit {
 
    constructor(private router:Router) {
 
@@ -23,6 +23,5 @@ export class HomepageComponent implements OnInit {
         .catch(err => console.log(err));
 
     }
-
 
 }
