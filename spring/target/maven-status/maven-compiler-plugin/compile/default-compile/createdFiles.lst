@@ -2,5 +2,5 @@ com/athirapillai/project/ImageRepository.class
 com/athirapillai/project/Image.class
 com/athirapillai/project/ImaggaService.class
 com/athirapillai/project/MainController.class
-.netbeans_automatic_build
 com/athirapillai/project/Application.class
+com/athirapillai/project/UploadController.class

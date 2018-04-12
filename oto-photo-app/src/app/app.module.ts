@@ -11,7 +11,7 @@ Amplify.configure(aws_exports);
 
 
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './homepage/homepage.component';
+import { HomepageComponent, DialogOverviewExampleDialog } from './homepage/homepage.component';
 import { SunsetsComponent } from './sunsets/sunsets.component';
 import { NatureComponent } from './nature/nature.component';
 import { FoodComponent } from './food/food.component';
@@ -48,8 +48,12 @@ const appRoutes: Routes = [
     PhotoViewComponent,
     LoginComponent,
     SignupComponent,
-    ForgotComponent
+    ForgotComponent,
+    DialogOverviewExampleDialog,
   ],
+  entryComponents: [
+    DialogOverviewExampleDialog,
+  ]
   imports: [
     BrowserModule,
     CustomMaterialModule,

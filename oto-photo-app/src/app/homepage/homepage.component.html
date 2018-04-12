@@ -2,7 +2,7 @@
   <h1>WELCOME TO</h1><a routerLink="/"><img width="450" height="195" alt="logo" src="/assets/logo.png"></a>
 </div>
 <br><br>
-<div style="text-align: center;"><a routerLink="/"><button type="button" class="styledButton">Upload Photo</button></a></div>
+<div style="text-align: center;"><button mat-raised-button (click)="openDialog()" class="styledButton">Upload Photo</button></div>
 
 <br>
 
@@ -12,18 +12,18 @@
       <a routerLink="/sunsets"><img class="img-fluid" width="365" height="310" alt="sunsets" src="/assets/sunsets.png"></a>
     </div>
     <div class="col-sm">
-      <a routerLink="/nature"><img class="img-fluid" width="365" height="310" alt="forests" src="/assets/nature.png"></a>
+      <a routerLink="/nature"><img class="img-fluid" width="365" height="310" alt="nature" src="/assets/nature.png"></a>
     </div>
     <div class="col-sm">
-      <a routerLink="/food"><img class="img-fluid" width="365" height="310" alt="mountains" src="/assets/food.png"></a>
+      <a routerLink="/food"><img class="img-fluid" width="365" height="310" alt="food" src="/assets/food.png"></a>
     </div>
   </div>
   <div class="row">
     <div class="col-sm">
-      <a routerLink="/animals"><img class="img-fluid" width="365" height="310" alt="water" src="/assets/animals.png"></a>
+      <a routerLink="/animals"><img class="img-fluid" width="365" height="310" alt="animals" src="/assets/animals.png"></a>
     </div>
     <div class="col-sm">
-      <a routerLink="/art"><img class="img-fluid" width="365" height="310" alt="landmarks" src="/assets/art.png"></a>
+      <a routerLink="/art"><img class="img-fluid" width="365" height="310" alt="art" src="/assets/art.png"></a>
     </div>
     <div class="col-sm">
       <a routerLink="/favorites"><img class="img-fluid" width="365" height="310" alt="favorites" src="/assets/favorites.png"></a>

@@ -11,6 +11,4 @@ import org.springframework.data.repository.CrudRepository;
  *
  * @author athirapillai
  */
-public interface ImageRepository extends CrudRepository<Image, String> {
-    
-}
+public interface ImageRepository extends CrudRepository<Image, String> {}
