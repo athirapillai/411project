@@ -41,7 +41,8 @@ There will be a total of three checkpoints, one for every two weeks for the rest
 ### Checkpoint 2: April 12, 2018
 - Set up initial five themed albums to databases
 - Integrate Imagga API for gathering meta data
-- Set up photo upload (including caption and description) for each album
+- Set up photo upload (including caption and location) for each album
+- After photo upload, if Imagga is able to categorize photo, user is redirected to the respective album.
 
 ### Checkpoint 3: April 26, 2018
 - Set up favoriting capability
