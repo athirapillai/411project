@@ -4,6 +4,7 @@ import {CustomMaterialModule} from './custom.materials';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import Amplify, { Auth } from 'aws-amplify';
 import aws_exports from '../aws-exports';
 Amplify.configure(aws_exports);
@@ -23,6 +24,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ForgotComponent } from './forgot/forgot.component';
 
+
 const appRoutes: Routes = [
  { path: 'sunsets', component: SunsetsComponent },
  { path: 'nature', component: NatureComponent },
@@ -32,7 +34,7 @@ const appRoutes: Routes = [
  { path: 'favorites', component: FavoritesComponent },
  { path: 'signup', component: SignupComponent },
  { path: 'home', component: HomepageComponent },
- { path: '**', component: LoginComponent }
+ { path: '**', component: LoginComponent },
 ];
 
 @NgModule({
@@ -53,11 +55,12 @@ const appRoutes: Routes = [
   ],
   entryComponents: [
     DialogOverviewExampleDialog,
-  ]
+  ],
   imports: [
     BrowserModule,
     CustomMaterialModule,
     FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(
           appRoutes,

@@ -5,10 +5,16 @@
  */
 package com.athirapillai.project;
 
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author athirapillai
  */
-public interface ImageRepository extends CrudRepository<Image, String> {}
+@Repository
+public interface ImageRepository extends CrudRepository<Image, Long> {
+    
+    public List<Image> findByImageAlbum(String imageAlbum);
+}

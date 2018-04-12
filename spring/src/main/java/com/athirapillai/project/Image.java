@@ -16,11 +16,11 @@ import javax.persistence.GenerationType;
  * @author athirapillai
  */
 @Entity
-public class Image implements Serializable {
+public class Image {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public String id;
+    public Long id;
     public String imageAlbum;
     public String caption;
     public String location;
@@ -43,6 +43,64 @@ public class Image implements Serializable {
         this.caption = caption;
         this.location = location;
         this.url = url;
+        this.ownerId = ownerId;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    
+    public String getImageAlbum() {
+        return imageAlbum;
+    }
+
+    
+    public void setImageAlbum(String imageAlbum) {
+        this.imageAlbum = imageAlbum;
+    }
+
+    
+    public String getCaption() {
+        return caption;
+    }
+
+    
+    public void setCaption(String caption) {
+        this.caption = caption;
+    }
+
+    
+    public String getLocation() {
+        return location;
+    }
+
+    
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    
+    public String getUrl() {
+        return url;
+    }
+
+    
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    
+    public String getOwnerId() {
+        return ownerId;
+    }
+
+    
+    public void setOwnerId(String ownerId) {
         this.ownerId = ownerId;
     }
 

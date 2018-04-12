@@ -1,17 +1,23 @@
 <form>
-<h1 mat-dialog-title>Upload Photo</h1>
+<h2 mat-dialog-title>Upload New Photo</h2>
+  <br>
 <div mat-dialog-content>
+
+  <label for="file">Upload your image</label>
+  <input (change)="fileAdded($event)" name="file" type="file" id="file" accept="image/*">
+  <br><br><br>
   <mat-form-field>
     <input id="caption" name="caption" matInput [(ngModel)]="data.caption" placeholder="What would you like to caption this image?">
   </mat-form-field>
-    <mat-form-field>
-      <input id="location" name="location" matInput [(ngModel)]="data.location" placeholder="Where was this image taken?">
-    </mat-form-field>
-      <input [(ngModel)]="data.file" name="file" type="file" id="file" accept="image/*">
-      <label for="file">Upload your image</label>
+  <br>
+  <mat-form-field>
+    <input id="location" name="location" matInput [(ngModel)]="data.location" placeholder="Where was this image taken?">
+  </mat-form-field>
 </div>
+
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Upload Image</button>
+  &nbsp;
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Upload Photo</button>
 </div>
 </form>

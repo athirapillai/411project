@@ -34,7 +34,7 @@ public class ImaggaService {
         String basicAuth = Base64.getEncoder().encodeToString(credentialsToEncode.getBytes(StandardCharsets.UTF_8));
 
         String endpoint_url = "https://api.imagga.com/v1/categorizations";
-        String categorizerId = "oto_categorizer";
+        String categorizerId = "personal_photos";
         String image_url = image.url;
 
         String url = endpoint_url + "/" + categorizerId + "?url=" + image_url;
@@ -58,7 +58,7 @@ public class ImaggaService {
             JSONArray categories =  (JSONArray) result.get("categories");
             JSONObject category =  (JSONObject) categories.get(0);
             String name = (String) category.get("name");
-            
+            System.out.println(name);
             switch(name) {
                 case "nature landscape":
                     return "nature landscape";
