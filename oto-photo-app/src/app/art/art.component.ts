@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   selector: 'app-art',
   templateUrl: './art.component.html',
   styleUrls: ['./art.component.css'],
-  providers: [Router],
 })
 export class ArtComponent implements OnInit {
 

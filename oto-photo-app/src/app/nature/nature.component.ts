@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
   selector: 'app-nature',
   templateUrl: './nature.component.html',
   styleUrls: ['./nature.component.css'],
-  providers: [Router],
 })
 export class NatureComponent implements OnInit {
 

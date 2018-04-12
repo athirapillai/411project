@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   selector: 'app-animals',
   templateUrl: './animals.component.html',
   styleUrls: ['./animals.component.css'],
-  providers: [Router],
 })
 export class AnimalsComponent implements OnInit {
 

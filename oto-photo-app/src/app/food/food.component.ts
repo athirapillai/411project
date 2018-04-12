@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
   selector: 'app-food',
   templateUrl: './food.component.html',
   styleUrls: ['./food.component.css'],
-  providers: [Router],
 })
 export class FoodComponent implements OnInit {
 

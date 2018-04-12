@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
   selector: 'app-sunsets',
   templateUrl: './sunsets.component.html',
   styleUrls: ['./sunsets.component.css'],
-  providers: [Router],
 })
 export class SunsetsComponent implements OnInit {
 
