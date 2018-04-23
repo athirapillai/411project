@@ -8,12 +8,14 @@
 
 <form class="login-form">
 
-  <mat-form-field class="login-full-width">
-    <input matInput placeholder="E-mail" [(ngModel)]="email" name="email">
-  </mat-form-field>
-  <mat-form-field class="login-full-width">
-    <input matInput placeholder="Password" type=password [(ngModel)]="password" name="password">
-  </mat-form-field>
+  <div class="input-field col s12">
+    <input id="email" type="email" [(ngModel)]="email" name="email">
+    <label for="email">E-mail</label>
+  </div>
+  <div class="input-field col s12">
+    <input id="password" type="password" [(ngModel)]="password" name="password">
+    <label for="password">Password</label>
+  </div>
   <a><button (click)="signInEmail()" type="button" class="styledButton">Login</button></a>
   <br><br>
 </form>

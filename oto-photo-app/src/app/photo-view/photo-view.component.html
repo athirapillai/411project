@@ -1,11 +1,14 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm">
-  <div class="photoBox">
-
-photo box
-    <img [src]="data.url">
-
-  </div></div>
-    </div></div>
+    <div class="photo-holder">
+      <div class="photoBox">
+        <img class="materialboxed" [src]="data.url" [attr.data-caption]="getCaption()">
+      </div>
+      <div class="caption-holder">
+        <p>{{data.caption}}</p>
+        <p>{{data.location}}</p>
+      </div>
+    </div>
+  </div>
+</div>
 

@@ -1,6 +1,6 @@
 com/athirapillai/project/ImageRepository.class
-com/athirapillai/project/Image.class
-com/athirapillai/project/ImaggaService.class
 com/athirapillai/project/MainController.class
 com/athirapillai/project/Application.class
 com/athirapillai/project/UploadController.class
+com/athirapillai/project/Image.class
+com/athirapillai/project/ImaggaService.class

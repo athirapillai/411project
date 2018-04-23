@@ -2,34 +2,57 @@
   <h1>WELCOME TO</h1><a routerLink="/"><img width="450" height="195" alt="logo" src="/assets/logo.png"></a>
 </div>
 <br><br>
-<div style="text-align: center;"><button mat-raised-button (click)="openDialog()" class="styledButton">Upload Photo</button></div>
+<div style="text-align: center;">
+  <button mat-raised-button (click)="openDialog()" class="styledButton">Upload Photo</button>
+</div>
 
 <br>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-      <a routerLink="/sunsets"><img class="img-fluid" width="365" height="310" alt="sunsets" src="/assets/sunsets.png"></a>
+<div *ngIf="!loading; else spinner">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <a routerLink="/sunsets"><img class="img-fluid" width="365" height="310" alt="sunsets"
+                                      src="/assets/sunsets.png"></a>
+      </div>
+      <div class="col-sm">
+        <a routerLink="/nature"><img class="img-fluid" width="365" height="310" alt="nature"
+                                     src="/assets/nature.png"></a>
+      </div>
+      <div class="col-sm">
+        <a routerLink="/food"><img class="img-fluid" width="365" height="310" alt="food" src="/assets/food.png"></a>
+      </div>
     </div>
-    <div class="col-sm">
-      <a routerLink="/nature"><img class="img-fluid" width="365" height="310" alt="nature" src="/assets/nature.png"></a>
-    </div>
-    <div class="col-sm">
-      <a routerLink="/food"><img class="img-fluid" width="365" height="310" alt="food" src="/assets/food.png"></a>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm">
-      <a routerLink="/animals"><img class="img-fluid" width="365" height="310" alt="animals" src="/assets/animals.png"></a>
-    </div>
-    <div class="col-sm">
-      <a routerLink="/art"><img class="img-fluid" width="365" height="310" alt="art" src="/assets/art.png"></a>
-    </div>
-    <div class="col-sm">
-      <a routerLink="/favorites"><img class="img-fluid" width="365" height="310" alt="favorites" src="/assets/favorites.png"></a>
+    <div class="row">
+      <div class="col-sm">
+        <a routerLink="/animals"><img class="img-fluid" width="365" height="310" alt="animals"
+                                      src="/assets/animals.png"></a>
+      </div>
+      <div class="col-sm">
+        <a routerLink="/art"><img class="img-fluid" width="365" height="310" alt="art" src="/assets/art.png"></a>
+      </div>
+      <div class="col-sm">
+        <a routerLink="/favorites"><img class="img-fluid" width="365" height="310" alt="favorites"
+                                        src="/assets/favorites.png"></a>
+      </div>
     </div>
   </div>
 </div>
+<ng-template #spinner>
+  <div class="preloader-wrapper big active">
+    <div class="spinner-layer spinner-red-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+    </div>
+  </div>
+
+</ng-template>
 <br><br><br>
-<div style="text-align: center;"><a (click)="logout()"><button type="button" class="styledButton">Log Out</button></a></div>
+<div style="text-align: center;"><a (click)="logout()">
+  <button type="button" class="styledButton">Log Out</button>
+</a></div>
 

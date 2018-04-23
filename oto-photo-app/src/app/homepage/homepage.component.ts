@@ -14,10 +14,12 @@ import { ImageService } from '../imageservice.service';
 export class HomepageComponent implements OnInit {
 
    public fileUploadModel: FileUploadModel;
+   public loading:boolean;
 
    constructor(private router:Router, public dialog: MatDialog, private imageservice: ImageService) {
 
     this.fileUploadModel = new FileUploadModel();
+    this.loading = false;
    }
 
   openDialog(): void {
@@ -28,22 +30,43 @@ export class HomepageComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(async (result: FileUploadModel) => {
+
+      if (result) {
       console.log('The dialog was closed');
+      this.loading = true;
       let user = await Auth.currentAuthenticatedUser();
       result.ownerId = user.username;
       this.imageservice.uploadImage(result)
         .subscribe((result) => {
           console.log(result);
+          this.fileUploadModel = new FileUploadModel();
+          this.loading = false;
           switch (result.imageAlbum) {
             case "sunrises sunsets":
               this.router.navigate(['/sunsets']);
               break;
-
+            case "nature landscape":
+              this.router.navigate(['/nature']);
+              break;
+            case "food drinks":
+              this.router.navigate(['/food']);
+              break;
+            case "pets animals":
+              this.router.navigate(['/animals']);
+              break;
+            case "paintings art":
+              this.router.navigate(['/art']);
+              break;
 
           }
+
         }, (error) => {
           console.error(error);
+          this.loading = false;
+          alert(error.message);
+          this.fileUploadModel = new FileUploadModel();
         });
+       }
 
     });
   }

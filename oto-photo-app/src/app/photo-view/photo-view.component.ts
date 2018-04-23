@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+declare var $: any;
+
 @Component({
   selector: 'app-photo-view',
   templateUrl: './photo-view.component.html',
@@ -12,6 +14,13 @@ export class PhotoViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $(document).ready(function(){
+        $('.materialboxed').materialbox();
+      });
+  }
+
+  getCaption() {
+    return `${this.data.caption} | ${this.data.location}`;
   }
 
 }

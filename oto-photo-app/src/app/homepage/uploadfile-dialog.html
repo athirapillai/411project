@@ -6,13 +6,15 @@
   <label for="file">Upload your image</label>
   <input (change)="fileAdded($event)" name="file" type="file" id="file" accept="image/*">
   <br><br><br>
-  <mat-form-field>
-    <input id="caption" name="caption" matInput [(ngModel)]="data.caption" placeholder="What would you like to caption this image?">
-  </mat-form-field>
+  <div class="input-field col s12">
+    <input id="caption" type="text" name="caption" [(ngModel)]="data.caption">
+    <label for="caption">What would you like to caption this image?</label>
+  </div>
   <br>
-  <mat-form-field>
-    <input id="location" name="location" matInput [(ngModel)]="data.location" placeholder="Where was this image taken?">
-  </mat-form-field>
+  <div class="input-field col s12">
+    <input id="location" type="text" name="location" [(ngModel)]="data.location">
+    <label for="location">Where was this image taken?</label>
+  </div>
 </div>
 
 <div mat-dialog-actions>

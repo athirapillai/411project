@@ -8,9 +8,9 @@
     <h1>NATURE</h1></div>
 </div><br><br>
 <div class="container"><div class="row">
-
-
-  <app-photo-view></app-photo-view>
+  <div *ngFor="let i of files">
+    <app-photo-view [data]="i"></app-photo-view>
+  </div>
 
 </div></div>
 <br><br><br>

@@ -11,7 +11,7 @@ import { FileUploadModel } from '../file-upload-model';
   providers: [ImageService],
 })
 export class SunsetsComponent implements OnInit {
-  public files: FileUploadModel[];
+  public files: any[];
 
  constructor(private router:Router, private imageservice: ImageService) {
 
@@ -19,7 +19,11 @@ export class SunsetsComponent implements OnInit {
 
    ngOnInit() {
     this.imageservice.getImagesByAlbum('sunrises sunsets')
-      .subscribe(result => this.files = result);
+      .subscribe((data) => {
+        this.files = data;
+      }, (error) => {
+        console.error(error);
+      });
    }
 
    logout() {

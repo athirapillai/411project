@@ -35,6 +35,9 @@ public class UploadController {
 
     @Autowired
     public ImageRepository imageRepository;
+    
+    @Autowired
+    public FavoritesRepository favoritesRepository;
 
     public static final String bucketName = "imageuploads-otophoto";
 
@@ -87,7 +90,9 @@ public class UploadController {
         }
 
     }
-    
+
+
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value="/api/images", method = RequestMethod.GET, produces = "application/json")
     public @ResponseBody List<Image> getImages(@RequestParam("album") String imageAlbum) {
         if (imageAlbum == null || imageAlbum.isEmpty()) {
@@ -95,6 +100,34 @@ public class UploadController {
         } else {
             return imageRepository.findByImageAlbum(imageAlbum);
         }
+    }
+    
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RequestMapping(value="/api/favorites", method = RequestMethod.GET, produces = "application/json")
+    public @ResponseBody List<Favorites> getFavorites(@RequestParam("userid") String userid) {
+        if (userid == null || userid.isEmpty()) {
+            throw new IllegalArgumentException("User Id not found.");
+           
+        } else {
+            return favoritesRepository.findByUserid(userid);
+        }
+    }
+  
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RequestMapping(value="/api/favorites", method = RequestMethod.POST, produces = "application/json")
+    public @ResponseBody Favorites AddFavorite(@RequestParam("imageId") Long imageId, 
+            @RequestParam("userid") String userid) {
+        
+        if (imageId == null || imageId < 0 || userid == null || userid.isEmpty()) {
+            throw new IllegalArgumentException("Image Id/User Id not found.");
+            
+        } else {
+            Favorites favorite = new Favorites(imageId, userid);
+                Favorites save = favoritesRepository.save(favorite);
+                return save;
+            
+        }
+        
     }
 
     @ExceptionHandler

@@ -19,6 +19,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import com.google.common.net.UrlEscapers;
 
 /**
  *
@@ -38,7 +39,8 @@ public class ImaggaService {
         String image_url = image.url;
 
         String url = endpoint_url + "/" + categorizerId + "?url=" + image_url;
-        URL urlObject = new URL(url);
+        String escapedUrl = UrlEscapers.urlPathSegmentEscaper().escape(url);
+        URL urlObject = new URL(escapedUrl);
         HttpURLConnection connection = (HttpURLConnection) urlObject.openConnection();
 
         connection.setRequestProperty("Authorization", "Basic " + basicAuth);

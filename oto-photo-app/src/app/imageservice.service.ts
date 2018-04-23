@@ -25,7 +25,7 @@ export class ImageService {
   }
 
   getImagesByAlbum(albumName: string){
-    return this.http.get<FileUploadModel[]>(this.apiurl+"/images", { params: new HttpParams().set('album',albumName) });
+    return this.http.get<any[]>(this.apiurl+"/images", { params: new HttpParams().set('album',albumName) });
   }
 
 
