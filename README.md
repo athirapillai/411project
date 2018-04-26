@@ -1,7 +1,7 @@
 # Oto Photo Sharing Platform | Project Proposal
 Athira Pillai
 
-# LINK TO FINAL PROJECT: http://d2p6lw31rdv958.cloudfront.net/
+# Final project: [http://d2p6lw31rdv958.cloudfront.net/](http://d2p6lw31rdv958.cloudfront.net/)
 
 ## **Project Description**
 Oto is a photo sharing platform with themes for photographers of all levels of experience. Oto has five shared albums with a 'theme' assigned for each album. Most of these themes are related to nature. Every user can contribute to these shared albums to post images related to each theme, and the images are categorized within each album based on meta data such as location. This way, users can view the categorized images from all over the world.
