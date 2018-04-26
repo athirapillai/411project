@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {CustomMaterialModule} from './custom.materials';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import Amplify, { Auth } from 'aws-amplify';
 import aws_exports from '../aws-exports';
@@ -22,7 +22,6 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { PhotoViewComponent } from './photo-view/photo-view.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { ForgotComponent } from './forgot/forgot.component';
 
 
 const appRoutes: Routes = [
@@ -50,7 +49,6 @@ const appRoutes: Routes = [
     PhotoViewComponent,
     LoginComponent,
     SignupComponent,
-    ForgotComponent,
     DialogOverviewExampleDialog,
   ],
   entryComponents: [
@@ -60,6 +58,7 @@ const appRoutes: Routes = [
     BrowserModule,
     CustomMaterialModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(

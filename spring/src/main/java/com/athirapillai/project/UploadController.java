@@ -8,6 +8,7 @@ package com.athirapillai.project;
 /**
  *
  * @author athirapillai
+ * This class is the controller to perform all image-uploading functionalities
  */
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
@@ -42,15 +43,15 @@ public class UploadController {
     public static final String bucketName = "imageuploads-otophoto";
 
     /**
-     *
+     * This method handles photo upload, including fields for caption and location
      * @param caption
      * @param location
      * @param ownerId
      * @param file
-     * @return
+     * @return Image
      * @throws IOException
      */
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "http://d2p6lw31rdv958.cloudfront.net")
     @RequestMapping(value = "/api/upload", method = RequestMethod.POST, produces = "application/json")
     public @ResponseBody Image oto(@RequestParam("caption") String caption, @RequestParam("location") String location,
             @RequestParam("ownerId") String ownerId, @RequestParam("file") MultipartFile file) throws IOException {
@@ -78,7 +79,9 @@ public class UploadController {
             );
             Image image = new Image(caption, location, "https://s3.us-east-2.amazonaws.com/" + bucketName + "/"
                     + file.getOriginalFilename(), ownerId);
+            System.out.println("bucketname url passed");
             String album = ImaggaService.categorizeImage(image);
+            System.out.println(album);
             if (album == null) {
                 throw new IllegalArgumentException("Your image did not fit into any of the album categories.");
 
@@ -91,8 +94,12 @@ public class UploadController {
 
     }
 
-
-    @CrossOrigin(origins = "http://localhost:4200")
+    /**
+     * This method takes an album name and returns all its images
+     * @param imageAlbum
+     * @return list of images
+     */
+    @CrossOrigin(origins = "http://d2p6lw31rdv958.cloudfront.net")
     @RequestMapping(value="/api/images", method = RequestMethod.GET, produces = "application/json")
     public @ResponseBody List<Image> getImages(@RequestParam("album") String imageAlbum) {
         if (imageAlbum == null || imageAlbum.isEmpty()) {
@@ -101,8 +108,13 @@ public class UploadController {
             return imageRepository.findByImageAlbum(imageAlbum);
         }
     }
-    
-    @CrossOrigin(origins = "http://localhost:4200")
+
+    /**
+     * This method takes a userid and returns all the associated favorited images
+     * @param userid
+     * @return list of favorited images
+     */
+    @CrossOrigin(origins = "http://d2p6lw31rdv958.cloudfront.net")
     @RequestMapping(value="/api/favorites", method = RequestMethod.GET, produces = "application/json")
     public @ResponseBody List<Favorites> getFavorites(@RequestParam("userid") String userid) {
         if (userid == null || userid.isEmpty()) {
@@ -112,8 +124,14 @@ public class UploadController {
             return favoritesRepository.findByUserid(userid);
         }
     }
-  
-    @CrossOrigin(origins = "http://localhost:4200")
+
+    /**
+     * This method adds an image to the Favorites using imageid and userid
+     * @param imageId
+     * @param userid
+     * @return saves image to favorites
+     */
+    @CrossOrigin(origins = "http://d2p6lw31rdv958.cloudfront.net")
     @RequestMapping(value="/api/favorites", method = RequestMethod.POST, produces = "application/json")
     public @ResponseBody Favorites AddFavorite(@RequestParam("imageId") Long imageId, 
             @RequestParam("userid") String userid) {
@@ -122,7 +140,7 @@ public class UploadController {
             throw new IllegalArgumentException("Image Id/User Id not found.");
             
         } else {
-            Favorites favorite = new Favorites(imageId, userid);
+            Favorites favorite = new Favorites(imageRepository.findById(imageId), userid);
                 Favorites save = favoritesRepository.save(favorite);
                 return save;
             

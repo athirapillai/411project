@@ -5,6 +5,11 @@
         <img class="materialboxed" [src]="data.url" [attr.data-caption]="getCaption()">
       </div>
       <div class="caption-holder">
+        <div class="favorites-icon" [hidden]="!showFavorite" (click)="favoriteclicked()">
+          <img src="/assets/unfavorited.png" class="unfavorited" *ngIf="!this.favorited">
+          <img src="/assets/favorited.png" class="favorited" *ngIf="this.favorited">
+          <img src="/assets/unfavorited.png" class="unfavorited" style="visibility:hidden;">
+        </div>
         <p>{{data.caption}}</p>
         <p>{{data.location}}</p>
       </div>

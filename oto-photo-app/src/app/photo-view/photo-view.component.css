@@ -29,3 +29,26 @@
   margin-bottom: 0;
   font-weight: light;
 }
+
+.favorites-icon {
+  float: left;
+  height: 50px;
+}
+
+.unfavorited {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transition: all 0.5s;
+
+}
+
+.favorited {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transition: all 0.5s;
+
+}

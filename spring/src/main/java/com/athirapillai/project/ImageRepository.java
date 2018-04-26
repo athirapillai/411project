@@ -12,9 +12,11 @@ import org.springframework.stereotype.Repository;
 /**
  *
  * @author athirapillai
+ * This interface connects to the database for uploaded images
  */
 @Repository
 public interface ImageRepository extends CrudRepository<Image, Long> {
     
     public List<Image> findByImageAlbum(String imageAlbum);
+    public Image findById(Long id);
 }

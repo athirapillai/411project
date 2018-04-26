@@ -7,18 +7,23 @@
 
 <form class="login-form">
 
-  <mat-form-field class="login-full-width">
-    <input matInput placeholder="E-mail" [(ngModel)]="email" name="email">
-  </mat-form-field>
-  <mat-form-field class="login-full-width">
-    <input matInput placeholder="Password" type=password [(ngModel)]="password" name="password">
-  </mat-form-field>
-  <mat-form-field class="login-full-width">
-    <input matInput placeholder="Confirm Password" type=password [(ngModel)]="confirmpassword" name="confirmpassword">
-  </mat-form-field>
+  <div class="input-field col s12">
+    <input id="email" type="email" [(ngModel)]="email" name="email">
+    <label for="email">E-mail</label>
+  </div>
+  <div class="input-field col s12">
+    <input id="password" type="password" [(ngModel)]="password" name="password">
+    <label for="password">Password</label>
+  </div>
+  <div class="input-field col s12">
+    <input id="confirmpassword" type="password" [(ngModel)]="confirmpassword" name="confirmpassword">
+    <label for="confirmpassword">Confirm Password</label>
+  </div>
   <a><button (click)="signUpEmail()" type="button" class="styledButton">Create Account</button></a>
 </form>
 <br><br><br>
 <div class="row">
-  <a routerLink="login"><h4>Already have an account?<strong> Sign In.</strong></h4></a></div>
+  <a routerLink="/login"><h4>Already have an account?<strong> Sign In.</strong></h4></a></div>
+
+
 

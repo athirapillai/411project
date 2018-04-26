@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class ImageService {
 
-  apiurl="http://localhost:8080/api"
+  apiurl="http://otophoto-env.us-east-2.elasticbeanstalk.com/api"
 
   constructor(private http: HttpClient) { }
 
@@ -28,5 +28,15 @@ export class ImageService {
     return this.http.get<any[]>(this.apiurl+"/images", { params: new HttpParams().set('album',albumName) });
   }
 
+  favoriteImage(userid: string, imageId: number) {
+    let params = new HttpParams();
+    params = params.set('userid', userid);
+    params = params.set('imageId', imageId.toString());
+    return this.http.post<any>(this.apiurl+"/favorites", params, {});
+  }
+
+  getFavorites(userid: string): Observable<any[]> {
+    return this.http.get<any[]>(this.apiurl+"/favorites", { params: new HttpParams().set('userid',userid) });
+  }
 
 }

@@ -11,28 +11,25 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 /**
  *
  * @author athirapillai
+ * This class handles favoriting images according to specific user / userid
  */
+
+
 
 @Entity
 public class Favorites {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
-    @JoinTable(
-            name="Image",
-            joinColumns=@JoinColumn(
-                    name="imageId",
-                    referencedColumnName="id"
-            )
-    )
-    
-    public Long imageId;
+    @ManyToOne
+    public Image image;
     public String userid;
 
     public Long getId() {
@@ -43,17 +40,20 @@ public class Favorites {
         this.id = id;
     }
 
-    public Favorites(Long imageId, String userid) {
-        this.imageId = imageId;
+    public Favorites() {
+    }
+
+    public Favorites(Image image, String userid) {
+        this.image = image;
         this.userid = userid;
     }
 
-    public Long getImageId() {
-        return imageId;
+    public Image getImage() {
+        return image;
     }
 
-    public void setImageId(Long imageId) {
-        this.imageId = imageId;
+    public void setImage(Image image) {
+        this.image = image;
     }
 
     public String getUserid() {

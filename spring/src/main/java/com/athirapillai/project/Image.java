@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 /**
  *
  * @author athirapillai
+ * This class handles each image and its id, album, caption, location, url, owner id
  */
 @Entity
 public class Image {

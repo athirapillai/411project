@@ -27,7 +27,7 @@ export class SignupComponent implements OnInit {
           console.log(result);
           this.router.navigate(['/login']);
         })
-        .catch((err) => console.error(err));
+        .catch((err) => alert(err));
    }
   }
 }

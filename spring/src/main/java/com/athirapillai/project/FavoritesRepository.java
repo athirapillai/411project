@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 /**
  *
  * @author athirapillai
+ * This interface connects to the database for the favorited images
  */
 @Repository
 public interface FavoritesRepository extends CrudRepository<Favorites, Long> {

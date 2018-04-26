@@ -9,9 +9,9 @@
 </div><br><br>
 <div class="container"><div class="row">
 
-
-  <app-photo-view></app-photo-view>
-
+  <div *ngFor="let i of files">
+  <app-photo-view [data]="i" [showFavorite]="false"></app-photo-view>
+  </div>
 </div></div>
 <br><br><br>
 <div style="text-align: center;"><a (click)="logout()"><button type="button" class="styledButton">Log Out</button></a></div>

@@ -24,6 +24,7 @@ import com.google.common.net.UrlEscapers;
 /**
  *
  * @author athirapillai
+ * This class handles Imagga API for photo categorization and AWS Access keys
  */
 public class ImaggaService {
     public static final String APIKEY = "acc_b751ff167ffccef";
@@ -39,8 +40,7 @@ public class ImaggaService {
         String image_url = image.url;
 
         String url = endpoint_url + "/" + categorizerId + "?url=" + image_url;
-        String escapedUrl = UrlEscapers.urlPathSegmentEscaper().escape(url);
-        URL urlObject = new URL(escapedUrl);
+        URL urlObject = new URL(url);
         HttpURLConnection connection = (HttpURLConnection) urlObject.openConnection();
 
         connection.setRequestProperty("Authorization", "Basic " + basicAuth);
@@ -77,6 +77,7 @@ public class ImaggaService {
                  
             }
         } catch (ParseException ex) {
+            ex.printStackTrace();
             Logger.getLogger(ImaggaService.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
