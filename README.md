@@ -50,7 +50,7 @@ There will be a total of three checkpoints, one for every two weeks for the rest
 - Set up favoriting capability
 - Ensure multiple users can access site
 - Test to ensure images and data are stored in respective databases
-- Deploy to personal domain online
+- Deploy to AWS
 
 
 ### Interface View Mockups
